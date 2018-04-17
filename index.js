@@ -17,7 +17,7 @@ const streamer = stream => {
     if (index >= frames.length) index = 0; stream.push('\033[2J\033[H');
       stream.push(colors['red'](frames[index]));
       index++;
-  }, 70);
+  }, 150);
 }
 
 const server = http.createServer((req, res) => {
